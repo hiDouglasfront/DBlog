@@ -19,7 +19,7 @@ const pages = reactive([
             </NuxtLink>
 
             <ul class="flex items-center gap-8">
-                <li v-for="(page, index) in pages" :key="index" class="text-lg text-white">
+                <li v-for="(page, index) in pages" :key="index" class="text-lg text-white hover:opacity-80 transition duration-500">
                     <NuxtLink :to="page.path">
                         {{ page.name }}
                     </NuxtLink>
