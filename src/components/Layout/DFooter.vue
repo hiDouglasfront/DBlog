@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <footer class="h-64 bg-gray-900">
+    <footer class="h-64 bg-[#0C0C0D]">
         <div class="container mx-auto h-full flex flex-col justify-center items-center px-4 md:px-0">
             <NuxtLink to="/">
                 <LayoutLogo />

@@ -12,14 +12,14 @@ const pages = reactive([
 </script>
 
 <template>
-    <header class="h-20 bg-gray-900">
-        <nav class="container mx-auto h-full flex justify-between items-center">
+    <header class="h-20 bg-[#0C0C0D]">
+        <nav class="container w-4/5 mx-auto my-0 h-full flex justify-between items-center">
             <NuxtLink to="/">
                 <LayoutLogo />
             </NuxtLink>
 
             <ul class="flex items-center gap-8">
-                <li v-for="(page, index) in pages" :key="index" class="text-lg text-white hover:opacity-80 transition duration-500">
+                <li v-for="(page, index) in pages" :key="index" class="text-lg text-white transition duration-1000 hover:border-b-2 border-green-600 hover:opacity-80">
                     <NuxtLink :to="page.path">
                         {{ page.name }}
                     </NuxtLink>

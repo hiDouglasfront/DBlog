@@ -30,12 +30,14 @@ function formatDate(date) {
 </script>
 
 <template>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div v-for="article in articles" :key="article.id" class="bg-white shadow-md rounded-lg p-4">
-            <h2 class="text-lg font-bold mb-2">{{ article.title }}</h2>
-            <p class="text-gray-600 mb-2">By {{ article.author }}</p>
-            <p class="text-gray-600 mb-2">{{ formatDate(article.date) }}</p>
-            <p class="text-gray-800">{{ article.summary }}</p>
-        </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 enterScreen">
+        <NuxtLink to="/" v-for="article in articles" :key="article.id" class="bg-[#18181B] shadow-md rounded-lg p-4">
+            <h2 class="text-white text-lg font-bold mb-2">{{ article.title }}</h2>
+            <p class="text-gray-400 mb-4">{{ article.summary }}</p>
+            <div class="flex justify-between">
+                <p class="text-gray-600">{{ formatDate(article.date) }}</p>
+                <p class="text-gray-600 mb-2">By {{ article.author }}</p>
+            </div>
+        </NuxtLink>
     </div>
 </template>
